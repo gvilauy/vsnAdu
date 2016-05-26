@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<definitions name="ws_MensManifiesto" targetNamespace="www.aduanas.gub.uy/DAE" xmlns:wsdlns="www.aduanas.gub.uy/DAE" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="www.aduanas.gub.uy/DAE">
+	<types>
+		<schema targetNamespace="www.aduanas.gub.uy/DAE" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+			<element name="ws_MensManifiesto.Execute">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="In" type="xsd:string" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws_MensManifiesto.ExecuteResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Out" type="xsd:string" />
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</types>
+	<message name="ws_MensManifiesto.ExecuteSoapIn">
+		<part name="parameters" element="tns:ws_MensManifiesto.Execute" />
+	</message>
+	<message name="ws_MensManifiesto.ExecuteSoapOut">
+		<part name="parameters" element="tns:ws_MensManifiesto.ExecuteResponse" />
+	</message>
+	<portType name="ws_MensManifiestoSoapPort">
+		<operation name="Execute">
+			<input message="wsdlns:ws_MensManifiesto.ExecuteSoapIn" />
+			<output message="wsdlns:ws_MensManifiesto.ExecuteSoapOut" />
+		</operation>
+	</portType>
+	<binding name="ws_MensManifiestoSoapBinding" type="wsdlns:ws_MensManifiestoSoapPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="Execute">
+			<soap:operation soapAction="www.aduanas.gub.uy/DAEaction/AWS_MENSMANIFIESTO.Execute" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+	<service name="ws_MensManifiesto">
+		<port name="ws_MensManifiestoSoapPort" binding="wsdlns:ws_MensManifiestoSoapBinding">
+			<soap:address location="https://servicios.aduanas.gub.uy/LuciaWS/aws_mensmanifiesto.aspx" />
+		</port>
+	</service>
+</definitions>
+

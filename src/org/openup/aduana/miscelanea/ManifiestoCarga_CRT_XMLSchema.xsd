@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio - FREE Community Edition 7.0.2.746 (http://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.aduanas.gub.uy/LUCIA/DAE" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="Signature.xsd" namespace="http://www.w3.org/2000/09/xmldsig#" />
+  <xs:element name="DAE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TipoDocumento" type="xs:unsignedByte" />
+        <xs:element name="IdDocumento" type="xs:unsignedLong" />
+        <xs:element name="FechaHoraDocumentoElectronico" type="xs:dateTime" />
+        <xs:element name="CodigoIntercambio" type="xs:string" />
+        <xs:element name="Objeto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Imagen">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="TipoDocumentoEscaneado" type="xs:string" />
+                    <xs:element name="FechaEmision" type="xs:string" />
+                    <xs:element name="DocIdOriginal" type="xs:string" />
+                    <xs:element name="DocPaisEmision" type="xs:string" />
+                    <xs:element name="ContenidoBase64" type="xs:string" />
+                    <xs:element name="TipoArchivo" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <!-- xs:element xmlns:q1="http://www.w3.org/2000/09/xmldsig#" ref="q1:Signature" /-->
+          <xs:element name="Signature">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SignedInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CanonicalizationMethod">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:anyURI" name="Algorithm"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SignatureMethod">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:anyURI" name="Algorithm"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Reference">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Transforms">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Transform">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:anyURI" name="Algorithm"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DigestMethod">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:anyURI" name="Algorithm"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="DigestValue"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="URI"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="SignatureValue"/>
+        <xs:element name="KeyInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="X509Data">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="X509Certificate"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

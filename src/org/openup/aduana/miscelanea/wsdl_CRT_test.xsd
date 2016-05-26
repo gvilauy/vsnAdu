@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<definitions name="wsImagen" targetNamespace="www.aduanas.gub.uy/DAE" xmlns:wsdlns="www.aduanas.gub.uy/DAE" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="www.aduanas.gub.uy/DAE">
+	<types>
+		<schema targetNamespace="www.aduanas.gub.uy/DAE" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+			<element name="wsImagen.Execute">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="In" type="xsd:string" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="wsImagen.ExecuteResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Out" type="xsd:string" />
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</types>
+	<message name="wsImagen.ExecuteSoapIn">
+		<part name="parameters" element="tns:wsImagen.Execute" />
+	</message>
+	<message name="wsImagen.ExecuteSoapOut">
+		<part name="parameters" element="tns:wsImagen.ExecuteResponse" />
+	</message>
+	<portType name="wsImagenSoapPort">
+		<operation name="Execute">
+			<input message="wsdlns:wsImagen.ExecuteSoapIn" />
+			<output message="wsdlns:wsImagen.ExecuteSoapOut" />
+		</operation>
+	</portType>
+	<binding name="wsImagenSoapBinding" type="wsdlns:wsImagenSoapPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="Execute">
+			<soap:operation soapAction="www.aduanas.gub.uy/DAEaction/AWSIMAGEN.Execute" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+	<service name="wsImagen">
+		<port name="wsImagenSoapPort" binding="wsdlns:wsImagenSoapBinding">
+			<soap:address location="http://200.40.211.198/LuciaWs/awsimagen.aspx" />
+		</port>
+	</service>
+</definitions>
+

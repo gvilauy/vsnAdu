@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.aduanas.gub.uy/LUCIA/DAE" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import schemaLocation="ws_Manifiesto1.xsd" namespace="http://www.w3.org/2000/09/xmldsig#" />
+  <xs:element name="DAE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TipoDocumento" type="xs:string" />
+        <xs:element name="IdDocumento" type="xs:string" />
+        <xs:element name="FechaHoraDocumentoElectronico" type="xs:dateTime" />
+        <xs:element name="CodigoIntercambio" type="xs:string" />
+        <xs:element name="Objeto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Manifiestos">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Manifiesto">					
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="TransporteTipo" type="xs:string" />
+                          <xs:element name="ManifiestoTipo" type="xs:string" />
+                          <xs:element name="ManifiestoNumero" type="xs:string" minOccurs="0" />
+                          <xs:element name="Recinto" type="xs:string" minOccurs="0" />
+                          <xs:element name="FechaArribo" type="xs:unsignedInt" />
+                          <xs:element name="RegistroTipo" type="xs:string" minOccurs="0" />
+                          <xs:element name="AgenteTransportistaTipoDocumento" type="xs:string" minOccurs="0" />
+                          <xs:element name="AgenteTransportistaDocumento" type="xs:string" minOccurs="0" />
+                          <xs:element name="LugarPartidaCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="LugarDestinoCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="UltimoPuerto" type="xs:string" minOccurs="0" />
+                          <xs:element name="MedioTransporteMatricula" type="xs:string" minOccurs="0"/>
+                          <xs:element name="MedioTransporteNacionalidad" type="xs:string" minOccurs="0"/>
+                          <xs:element name="FechaLlegada" type="xs:dateTime" minOccurs="0"/>						  
+                          <xs:element name="FechaSalida" type="xs:dateTime" minOccurs="0"/>
+                          <xs:element name="Observacion" type="xs:string" minOccurs="0"/>
+                          <xs:element name="MedioTransporteNombre" type="xs:string" minOccurs="0" />
+                          <xs:element name="FechaFinCargaDescarga" type="xs:dateTime" minOccurs="0" />
+                          <xs:element name="ViajeNumero" type="xs:string" minOccurs="0" />
+                          <xs:element name="OperacionTipo" type="xs:string" minOccurs="0" />
+                          <xs:element name="ManifiestoOriginalNumero" type="xs:string" minOccurs="0" />
+                          <xs:element name="AgenteTransportistaNombre" type="xs:string" minOccurs="0" />
+                          <xs:element name="AgenteTransportistaPais" type="xs:string" minOccurs="0" />
+                          <xs:element name="AgenteTransportistaDireccion" type="xs:string" minOccurs="0" />
+                          <xs:element name="LugarPartida" type="xs:string" minOccurs="0" />
+                          <xs:element name="LugarDestino" type="xs:string" minOccurs="0" />
+                          <xs:element name="AduanaIngresoCodigo" type="xs:string" minOccurs="0"/>
+                          <xs:element name="AduanaSalidaCodigo" type="xs:string" minOccurs="0"/>
+                          <xs:element name="FechaPasajeFrontera" type="xs:date" minOccurs="0" />
+                          <xs:element name="TractoraMatricula" type="xs:string" minOccurs="0" />
+                          <xs:element name="RemolqueMatricula" type="xs:string" minOccurs="0"/>
+                          <xs:element name="SemiRemolqueMatricula" type="xs:string" minOccurs="0"/>
+                          <xs:element name="TransportistaEfectivo" type="xs:string" minOccurs="0"/>
+                          <xs:element name="AgenteTransportistaRepresentanteTipoDoc" type="xs:string" minOccurs="0" />
+                          <xs:element name="AgenteTransportistaRepresentanteDoc" type="xs:string" minOccurs="0" />
+                          <xs:element name="PaisOrigenCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="PaisDestinoCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="TransportistaEfectivoRepresentanteTipoDoc" type="xs:string" minOccurs="0" />
+                          <xs:element name="TransportistaEfectivoRepresentanteDoc" type="xs:string" minOccurs="0" />
+                          <xs:element name="TransportistaEfectivoTipoDocumento" type="xs:string" minOccurs="0" />
+                          <xs:element name="TransportistaEfectivoDocumento" type="xs:string" minOccurs="0" />
+                          <xs:element name="RemolqueDuenoTipoDocumento" type="xs:string" minOccurs="0" />
+                          <xs:element name="RemolqueDuenoDocumento" type="xs:string" minOccurs="0" />
+                          <xs:element name="Lastre" type="xs:string" minOccurs="0" />
+                          <xs:element name="ConductorNombre" type="xs:string" minOccurs="0" />
+                          <xs:element name="ConductorTipoDocumento" type="xs:string" minOccurs="0" />
+                          <xs:element name="ConductorDocumento" type="xs:string" minOccurs="0" />
+                          <xs:element name="FechaLlegadaPrevista" type="xs:date" minOccurs="0" />
+                          <xs:element name="PlazoOrigenDestino" type="xs:unsignedInt" minOccurs="0" />
+                          <xs:element name="RutaDescripcion" type="xs:string" minOccurs="0" />
+                          <xs:element name="CiudadPartidaCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="CiudadSalidaCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="CiudadEntradaCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="AduanaEntradaCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="LugarOperativoEntradaCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="CiudadDestinoCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="AduanaDestinoCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="LugarOperativoDestinoCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="PaisTrasbordoCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="CiudadTrasbordoCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="AduanaTrasbordoCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="LugarOperativoTrasbordoCodigo" type="xs:string" minOccurs="0" />
+                          <xs:element name="TransitoAduanero" type="xs:string" minOccurs="0" />
+                          <xs:element name="AgenteTransportistaRepresentanteDocExtranjero" type="xs:string" minOccurs="0" />
+                          <xs:element name="TransportistaEfectivoRepresentanteDocExtranjero" type="xs:string" minOccurs="0" />
+                          <xs:element name="MedioTransporteCapacidadArrastre" type="xs:decimal" minOccurs="0" />
+                          <xs:element name="MedioTransporteAnoFabricacion" type="xs:unsignedInt" minOccurs="0" />						  
+						  <xs:element name="DocumentoPrecedenteTipo" type="xs:string" minOccurs="0" />
+						  <xs:element name="MicPrecedenteTipoTransporte" type="xs:string" minOccurs="0"/>
+						  <xs:element name="MicPrecedenteTipo" type="xs:string" minOccurs="0"/>
+						  <xs:element name="MicPrecedenteNumero" type="xs:string" minOccurs="0"/>
+						  <xs:element name="MicPrecedenteRecinto" type="xs:string" minOccurs="0"/>
+						  <xs:element name="MicPrecedenteFechaArribo" type="xs:unsignedInt" minOccurs="0"/>
+						  <xs:element name="GexPrecedenteNumero" type="xs:string" minOccurs="0"/>
+                          <xs:element name="Conocimientos" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element minOccurs="0" maxOccurs="unbounded" name="Conocimiento">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ConocimientoNumeroSecuencial" type="xs:unsignedInt" />
+                                      <xs:element name="ConocimientoOriginalNumero" type="xs:string" minOccurs="0" />
+                                      <xs:element name="PuertoEmbarque" type="xs:string" minOccurs="0" />
+                                      <xs:element name="RegistroTipo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="OperacionTipo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="ConocimientoTipo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="ConocimientoMasterNumero" type="xs:string" minOccurs="0" />
+                                      <xs:element name="PuertoDescarga" type="xs:string" minOccurs="0" />
+                                      <xs:element name="ConsignatarioTipoDocumento" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="ConsignatarioDocumento" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="ConsignatarioNombre" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="EndosoFecha" type="xs:date" minOccurs="0" />
+                                      <xs:element name="EndosoLugar" type="xs:string" minOccurs="0" />
+                                      <xs:element name="MercaderiaDestino" type="xs:string" minOccurs="0" />
+                                      <xs:element name="RemitenteTipoDocumento" type="xs:string" minOccurs="0" />
+                                      <xs:element name="RemitenteDocumento" type="xs:string" minOccurs="0" />
+                                      <xs:element name="RemitenteNombre" type="xs:string" minOccurs="0" />
+                                      <xs:element name="RemitenteDireccion" type="xs:string" minOccurs="0" />
+                                      <xs:element name="DestinatarioTipoDocumento" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="DestinatarioDocumento" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="DestinatarioNombre" type="xs:string" minOccurs="0" />
+                                      <xs:element name="DestinatarioDireccion" type="xs:string" minOccurs="0" />
+                                      <xs:element name="MercaderiaDestinoFinal" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="MercaderiaPeligrosa" type="xs:string" minOccurs="0" />
+                                      <xs:element name="FleteMonto" type="xs:decimal" minOccurs="0" />
+                                      <xs:element name="SeguroMonto" type="xs:decimal" minOccurs="0" />
+                                      <xs:element name="Consolidado" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Fraccionado" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Lineas" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element minOccurs="0" maxOccurs="unbounded" name="Linea">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="LineaNumero" type="xs:unsignedInt" />
+                                                  <xs:element name="RegistroTipo" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="PesoBruto" type="xs:decimal" minOccurs="0"/>
+                                                  <xs:element name="BultoTipo" type="xs:string" minOccurs="0"/>
+                                                  <xs:element name="BultoCantidad" type="xs:decimal" minOccurs="0"/>
+                                                  <xs:element name="Marcas" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="MercaderiaDescripcion" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="DepositoFinalCodigo" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="MercaderiaPeligrosaCodigo" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="OperacionTipo" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="ActaTexto" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="ActaNumero" type="xs:unsignedInt" minOccurs="0" />
+                                                  <xs:element name="ValorDeclaradoImporte" type="xs:decimal" minOccurs="0" />
+                                                  <xs:element name="ValorDeclaradoMoneda" type="xs:string" minOccurs="0" />
+                                                  <xs:element name="ContenedoresLinea" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element minOccurs="0" maxOccurs="unbounded" name="ContenedorLinea">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:element name="ContenedorNumero" type="xs:string" />
+                                                              <xs:element name="RegistroTipo" type="xs:string" minOccurs="0" />
+                                                              <xs:element name="CantidadBultos" type="xs:decimal" minOccurs="0"/>
+                                                            </xs:sequence>                                                            
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="Asociaciones" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element minOccurs="0" maxOccurs="unbounded" name="Asociacion">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:element name="DocumentoCodigo" type="xs:string" />
+                                                              <xs:element name="DocumentoNumero" type="xs:string" />
+                                                              <xs:element name="DocumentoAduanaCodigo" type="xs:string" />
+                                                              <xs:element name="DocumentoAno" type="xs:string" />
+                                                              <xs:element name="DocumentoLinea" type="xs:string" />
+                                                              <xs:element name="RegistroTipo" type="xs:string" minOccurs="0" />
+                                                              <xs:element name="BultoCantidad" type="xs:decimal" minOccurs="0"/>
+                                                              <xs:element name="BultoTipo" type="xs:string" minOccurs="0"/>
+                                                            </xs:sequence>                                                            
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>                                                
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Imagenes" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element minOccurs="0" maxOccurs="unbounded" name="Imagen">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ImagenNumeroSecuencial" type="xs:unsignedInt" />
+                                                  <xs:element name="ImagenNumero" type="xs:unsignedInt" />
+                                                  <xs:element name="RegistroTipo" type="xs:string" minOccurs="0"/>
+                                                </xs:sequence>                                                
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>                                    
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+						  <xs:element name="Contenedores" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+                                <xs:element maxOccurs="unbounded" name="Contenedor">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ContenedorNumero" type="xs:string" />
+                                      <xs:element name="RegistroTipo" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="Calificador" type="xs:string" minOccurs="0" />
+                                      <xs:element name="TamanoCodigo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="CompletoCodigo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="PesoBruto" type="xs:decimal" minOccurs="0" />
+                                      <xs:element name="Precinto1" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Precinto2" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Precinto3" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Precinto4" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Precinto5" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Precinto6" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Precinto7" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Precinto8" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Precinto9" type="xs:string" minOccurs="0" />
+                                      <xs:element name="DepositoDestinoCodigo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="ManifiestoDestinoNumero" type="xs:string" minOccurs="0" />
+                                      <xs:element name="ManifiestoDestinoFechaSalida" type="xs:unsignedInt" minOccurs="0" />
+                                      <xs:element name="OperacionTipo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="Observacion" type="xs:string" minOccurs="0" />
+                                    </xs:sequence>                                    
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Precintos" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+                                <xs:element maxOccurs="unbounded" name="Precinto">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="PrecintoNumero" type="xs:string" />
+                                      <xs:element name="RegistroTipo" type="xs:string" minOccurs="0"/>
+                                    </xs:sequence>                                    
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PaisesDePaso" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+                                <xs:element maxOccurs="unbounded" name="PaisDePaso">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="PaisDePasoNumeroSecuencial" type="xs:unsignedInt" />
+                                      <xs:element name="PaisDePasoCodigo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="CiudadEntradaCodigo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="AduanaDeEntradaCodigo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="LugarOperativoEntradaCodigo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="CiudadSalidaCodigo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="AduanaSalidaCodigo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="LugarOperativoSalidaCodigo" type="xs:string" minOccurs="0" />
+                                      <xs:element name="RegistroTipo" type="xs:string" minOccurs="0" />
+                                    </xs:sequence>                                    
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>                          
+                        </xs:sequence>                        
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+	   <!-- xs:element xmlns:q1="http://www.w3.org/2000/09/xmldsig#" ref="q1:Signature" /-->
+	     <xs:element name="Signature">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SignedInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CanonicalizationMethod">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:anyURI" name="Algorithm"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SignatureMethod">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:anyURI" name="Algorithm"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Reference">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Transforms">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Transform">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:anyURI" name="Algorithm"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DigestMethod">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:anyURI" name="Algorithm"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="DigestValue"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="URI"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="SignatureValue"/>
+        <xs:element name="KeyInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="X509Data">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="X509Certificate"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

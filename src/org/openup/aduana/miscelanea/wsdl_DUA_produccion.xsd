@@ -1,0 +1,522 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<definitions name="WSDUA" targetNamespace="www.aduanas.gub.uy/wsdua" xmlns:wsdlns="www.aduanas.gub.uy/wsdua" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns1="www.aduanas.gub.uy/wsduasdt" xmlns:tns="www.aduanas.gub.uy/wsdua">
+	<types>
+		<schema targetNamespace="www.aduanas.gub.uy/wsduasdt" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+			<import namespace="www.aduanas.gub.uy/wsdua" />
+			<complexType name="WSDUASDT">
+				<sequence>
+					<element name="CODI_ADUAN" type="xsd:string">
+					</element>
+					<element name="ANO_PRESE" type="xsd:string">
+					</element>
+					<element name="NUME_CORRE" type="xsd:string">
+					</element>
+					<element name="CODI_ALMA" type="xsd:string">
+					</element>
+					<element name="ESTADO" type="xsd:string">
+					</element>
+					<element name="DESP_URGE" type="xsd:string">
+					</element>
+					<element name="CODI_AGENT" type="xsd:string">
+					</element>
+					<element name="DocumentoAgente" type="xsd:string">
+					</element>
+					<element name="TipoDocAgente" type="xsd:string">
+					</element>
+					<element name="NombreAgente" type="xsd:string">
+					</element>
+					<element name="NUME_ORDEN" type="xsd:string">
+					</element>
+					<element name="CTIPODOC" type="xsd:string">
+					</element>
+					<element name="CDOCUMEN" type="xsd:string">
+					</element>
+					<element name="UNID_TRANS" type="xsd:byte">
+					</element>
+					<element name="VIA_TRANSP" type="xsd:string">
+					</element>
+					<element name="CODI_MONED" type="xsd:short">
+					</element>
+					<element name="FECH_INGSI" type="xsd:int">
+					</element>
+					<element name="HORA_INGSI" type="xsd:string">
+					</element>
+					<element name="ULTD_PAGO" type="xsd:int">
+					</element>
+					<element name="ID_MEDTRAN" type="xsd:string">
+					</element>
+					<element name="TRVJID" type="xsd:int">
+					</element>
+					<element name="TIPO_TRAN" type="xsd:string">
+					</element>
+					<element name="ASIG_EXTRA" type="xsd:string">
+					</element>
+					<element name="CODI_REGI" type="xsd:string">
+					</element>
+					<element name="ADUAINGEGR" type="xsd:string">
+					</element>
+					<element name="NOMB_IMPOR" type="xsd:string">
+					</element>
+					<element name="DIRE_IMPOR" type="xsd:string">
+					</element>
+					<element name="CODI_PAIS" type="xsd:string">
+					</element>
+					<element name="PAIS_TRANS" type="xsd:string">
+					</element>
+					<element name="POLFECH_VENC" type="xsd:int">
+					</element>
+					<element name="TOT_FACT" type="xsd:double">
+					</element>
+					<element name="POLDOBS" type="xsd:string">
+					</element>
+					<element name="POLDEPDEST" type="xsd:string">
+					</element>
+					<element name="TIPO_AFORO" type="xsd:string">
+					</element>
+					<element name="FECH_VISREAL" type="xsd:int">
+					</element>
+					<element name="DCLATRASAL" type="xsd:string">
+					</element>
+					<element name="NDNA_TRACT" type="xsd:long">
+					</element>
+					<element name="MATR_REMO" type="xsd:string">
+					</element>
+					<element name="MATR_SREM" type="xsd:string">
+					</element>
+					<element name="TDOCEMPTRA" type="xsd:string">
+					</element>
+					<element name="NDOCEMPTRA" type="xsd:string">
+					</element>
+					<element name="CALMDEST" type="xsd:string">
+					</element>
+					<element name="DCLATRALLE" type="xsd:string">
+					</element>
+					<element name="ADUNUMORI" type="xsd:string">
+					</element>
+					<element name="TIPCAMVEN" type="xsd:double">
+					</element>
+					<element name="TIPCAMCOM" type="xsd:double">
+					</element>
+					<element name="POLFECAUTS" type="xsd:int">
+					</element>
+					<element name="POLDUADIGI" type="xsd:string">
+					</element>
+					<element name="ITEMS">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="ITEM" type="tns1:WSDUASDT.ITEM">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="ASOCIACIONES">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="ASOC" type="tns1:WSDUASDT.ASOC">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="CONTENEDORES">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="CONTENEDOR" type="tns1:WSDUASDT.CONTENEDOR">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="DOCUMENTOS">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="DOCUMENTO" type="tns1:WSDUASDT.DOCUMENTO">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="FACTURAS">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="FACTURA" type="tns1:WSDUASDT.FACTURA">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="ENTRADASSTK">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="ENTRADASTK" type="tns1:WSDUASDT.ENTRADASTK">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="MOVIMIENTOS">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="MOVIMIENTO" type="tns1:WSDUASDT.MOVIMIENTO">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="CORRELACIONADOS">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="CORRELACIONADO" type="tns1:WSDUASDT.CORRELACIONADO">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="ArrayOfWSDUASDT.ITEM">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="WSDUASDT.ITEM" type="tns1:WSDUASDT.ITEM">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="WSDUASDT.ITEM">
+				<sequence>
+					<element name="NUM" type="xsd:int">
+					</element>
+					<element name="NUME_SERIE" type="xsd:string">
+					</element>
+					<element name="COD_DOCCA" type="xsd:string">
+					</element>
+					<element name="MARCAS_NUM" type="xsd:string">
+					</element>
+					<element name="CLASE" type="xsd:string">
+					</element>
+					<element name="CANT_BULTO" type="xsd:double">
+					</element>
+					<element name="DESC01" type="xsd:string">
+					</element>
+					<element name="DESC02" type="xsd:string">
+					</element>
+					<element name="DESC03" type="xsd:string">
+					</element>
+					<element name="DESC04" type="xsd:string">
+					</element>
+					<element name="DESC05" type="xsd:string">
+					</element>
+					<element name="PESO_NETO" type="xsd:double">
+					</element>
+					<element name="PESO_BRUTO" type="xsd:double">
+					</element>
+					<element name="PARTIDA" type="xsd:long">
+					</element>
+					<element name="CPROD" type="xsd:string">
+					</element>
+					<element name="PAIS_ORIGE" type="xsd:short">
+					</element>
+					<element name="UNID_FIQTY" type="xsd:double">
+					</element>
+					<element name="UNID_FIDES" type="xsd:string">
+					</element>
+					<element name="CODI_LIBER" type="xsd:short">
+					</element>
+					<element name="CONV_INTER" type="xsd:short">
+					</element>
+					<element name="QUNICOM" type="xsd:double">
+					</element>
+					<element name="TUNICOM" type="xsd:string">
+					</element>
+					<element name="PUER_EMBAR" type="xsd:short">
+					</element>
+					<element name="PAIS_ADQUI" type="xsd:short">
+					</element>
+					<element name="CIF_DOLPOL" type="xsd:double">
+					</element>
+					<element name="VAD_INCR" type="xsd:double">
+					</element>
+					<element name="TIPO_OPERA" type="xsd:string">
+					</element>
+					<element name="CNT_ANALI" type="xsd:byte">
+					</element>
+					<element name="TDOCDEST" type="xsd:string">
+					</element>
+					<element name="NDOCDEST" type="xsd:string">
+					</element>
+					<element name="NOMDOCDEST" type="xsd:string">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="ArrayOfWSDUASDT.ASOC">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="WSDUASDT.ASOC" type="tns1:WSDUASDT.ASOC">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="WSDUASDT.ASOC">
+				<sequence>
+					<element name="NUM" type="xsd:int">
+					</element>
+					<element name="NUME_SERIE" type="xsd:string">
+					</element>
+					<element name="CGTpoTrans" type="xsd:string">
+					</element>
+					<element name="CGTpoMic" type="xsd:string">
+					</element>
+					<element name="CGNroMic" type="xsd:string">
+					</element>
+					<element name="RGDepID" type="xsd:string">
+					</element>
+					<element name="CGFchArr" type="xsd:int">
+					</element>
+					<element name="CGNroConDNA" type="xsd:short">
+					</element>
+					<element name="CGNroLin" type="xsd:short">
+					</element>
+					<element name="CGNroMovAso" type="xsd:long">
+					</element>
+					<element name="CGAnoMovAso" type="xsd:short">
+					</element>
+					<element name="CGDepoAso" type="xsd:string">
+					</element>
+					<element name="CGCntBulAso" type="xsd:double">
+					</element>
+					<element name="CGEstAsoD" type="xsd:string">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="ArrayOfWSDUASDT.CONTENEDOR">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="WSDUASDT.CONTENEDOR" type="tns1:WSDUASDT.CONTENEDOR">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="WSDUASDT.CONTENEDOR">
+				<sequence>
+					<element name="NUM" type="xsd:int">
+					</element>
+					<element name="NUME_SECUE" type="xsd:short">
+					</element>
+					<element name="CNT_NUMERO" type="xsd:string">
+					</element>
+					<element name="CNT_PRECIN" type="xsd:string">
+					</element>
+					<element name="CNT_MEDID" type="xsd:short">
+					</element>
+					<element name="CNT_PRECI2" type="xsd:string">
+					</element>
+					<element name="CNT_PRECI3" type="xsd:string">
+					</element>
+					<element name="CNT_DEPDES" type="xsd:string">
+					</element>
+					<element name="CNT_MANDES" type="xsd:string">
+					</element>
+					<element name="CNT_FMANDE" type="xsd:int">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="ArrayOfWSDUASDT.DOCUMENTO">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="WSDUASDT.DOCUMENTO" type="tns1:WSDUASDT.DOCUMENTO">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="WSDUASDT.DOCUMENTO">
+				<sequence>
+					<element name="NUM" type="xsd:int">
+					</element>
+					<element name="NUME_SERIE" type="xsd:string">
+					</element>
+					<element name="COD_DOCCER" type="xsd:string">
+					</element>
+					<element name="FECH_VENC" type="xsd:int">
+					</element>
+					<element name="NRO_DOCCER" type="xsd:string">
+					</element>
+					<element name="DIDCODUNI" type="xsd:string">
+					</element>
+					<element name="DIDTPOUNI" type="xsd:string">
+					</element>
+					<element name="DIDCNTUNI" type="xsd:double">
+					</element>
+					<element name="MEIMAID" type="xsd:long">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="ArrayOfWSDUASDT.FACTURA">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="WSDUASDT.FACTURA" type="tns1:WSDUASDT.FACTURA">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="WSDUASDT.FACTURA">
+				<sequence>
+					<element name="NUM" type="xsd:int">
+					</element>
+					<element name="NUME_SERIE" type="xsd:string">
+					</element>
+					<element name="NUME_FACTU" type="xsd:string">
+					</element>
+					<element name="FECH_FACTU" type="xsd:int">
+					</element>
+					<element name="TERM_TRANS" type="xsd:string">
+					</element>
+					<element name="LUGARTRANS" type="xsd:string">
+					</element>
+					<element name="COD_DOCCER" type="xsd:string">
+					</element>
+					<element name="ITEM_FACTU" type="xsd:short">
+					</element>
+					<element name="MSDOCGRLID" type="xsd:long">
+					</element>
+					<element name="MSDOCIMPAS" type="xsd:double">
+					</element>
+					<element name="MSDOCCNTAS" type="xsd:double">
+					</element>
+					<element name="MEIMAID" type="xsd:long">
+					</element>
+					<element name="MSDOMDA" type="xsd:string">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="ArrayOfWSDUASDT.ENTRADASTK">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="WSDUASDT.ENTRADASTK" type="tns1:WSDUASDT.ENTRADASTK">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="WSDUASDT.ENTRADASTK">
+				<sequence>
+					<element name="NUM" type="xsd:int">
+					</element>
+					<element name="CGMItemDUA" type="xsd:string">
+					</element>
+					<element name="CGDepIdStk" type="xsd:string">
+					</element>
+					<element name="CGMovSkId" type="xsd:long">
+					</element>
+					<element name="CGAnoMov" type="xsd:short">
+					</element>
+					<element name="CGMovTpo" type="xsd:string">
+					</element>
+					<element name="CGMEstDUA" type="xsd:string">
+					</element>
+					<element name="CGMDUAOrg" type="xsd:string">
+					</element>
+					<element name="CGMDUAFch" type="xsd:dateTime" nillable="true">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="ArrayOfWSDUASDT.MOVIMIENTO">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="WSDUASDT.MOVIMIENTO" type="tns1:WSDUASDT.MOVIMIENTO">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="WSDUASDT.MOVIMIENTO">
+				<sequence>
+					<element name="NUM" type="xsd:int">
+					</element>
+					<element name="TRMOVORD" type="xsd:int">
+					</element>
+					<element name="TRMOVRCT" type="xsd:string">
+					</element>
+					<element name="TRMOVES" type="xsd:string">
+					</element>
+					<element name="TRMOVSTS" type="xsd:string">
+					</element>
+					<element name="TRMOVPBRUTO" type="xsd:double">
+					</element>
+					<element name="TRMOVPESO" type="xsd:double">
+					</element>
+					<element name="TRMOVBULT" type="xsd:double">
+					</element>
+					<element name="TRMOVMAT" type="xsd:string">
+					</element>
+					<element name="TRMOVMATZ" type="xsd:string">
+					</element>
+					<element name="TRMOVMATR" type="xsd:string">
+					</element>
+					<element name="TRMOVFUNC" type="xsd:string">
+					</element>
+					<element name="TRMOVFCH" type="xsd:date" nillable="true">
+					</element>
+					<element name="TRMOVHRA" type="xsd:string">
+					</element>
+					<element name="TRMOVANT" type="xsd:int">
+					</element>
+					<element name="TRMOVMENS" type="xsd:string">
+					</element>
+					<element name="TRMOVBZVac" type="xsd:string">
+					</element>
+					<element name="TRMOVBZLleno" type="xsd:string">
+					</element>
+					<element name="TRMOVCanal" type="xsd:string">
+					</element>
+					<element name="TRTryid" type="xsd:int">
+					</element>
+					<element name="Trconting" type="xsd:string">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="ArrayOfWSDUASDT.CORRELACIONADO">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="WSDUASDT.CORRELACIONADO" type="tns1:WSDUASDT.CORRELACIONADO">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="WSDUASDT.CORRELACIONADO">
+				<sequence>
+					<element name="CODI_ADUAN" type="xsd:string">
+					</element>
+					<element name="ANO_PRESE" type="xsd:string">
+					</element>
+					<element name="NUME_CORRE" type="xsd:string">
+					</element>
+					<element name="CODI_ALMA" type="xsd:string">
+					</element>
+				</sequence>
+			</complexType>
+		</schema>
+		<schema targetNamespace="www.aduanas.gub.uy/wsdua" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+			<import namespace="www.aduanas.gub.uy/wsduasdt" />
+			<element name="WSDUA.Execute">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Codi_aduan" type="xsd:string" />
+						<element minOccurs="1" maxOccurs="1" name="Ano_prese" type="xsd:string" />
+						<element minOccurs="1" maxOccurs="1" name="Nume_corre" type="xsd:string" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="WSDUA.ExecuteResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Dua" type="tns1:WSDUASDT" />
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</types>
+	<message name="WSDUA.ExecuteSoapIn">
+		<part name="parameters" element="tns:WSDUA.Execute" />
+	</message>
+	<message name="WSDUA.ExecuteSoapOut">
+		<part name="parameters" element="tns:WSDUA.ExecuteResponse" />
+	</message>
+	<portType name="WSDUASoapPort">
+		<operation name="Execute">
+			<input message="wsdlns:WSDUA.ExecuteSoapIn" />
+			<output message="wsdlns:WSDUA.ExecuteSoapOut" />
+		</operation>
+	</portType>
+	<binding name="WSDUASoapBinding" type="wsdlns:WSDUASoapPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="Execute">
+			<soap:operation soapAction="www.aduanas.gub.uy/wsduaaction/AWSDUA.Execute" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+	<service name="WSDUA">
+		<port name="WSDUASoapPort" binding="wsdlns:WSDUASoapBinding">
+			<soap:address location="https://servicios.aduanas.gub.uy/LuciaWS/awsdua.aspx" />
+		</port>
+	</service>
+</definitions>
